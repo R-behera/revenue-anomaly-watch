@@ -9,7 +9,8 @@
     "monitoring",
     "anomaly"
   ],
-  "accent": "#588157",
+  "accent": "#c82c2e",
+  "secondary_accent": "#412ca9",
   "dashboard_metrics": [
     {
       "label": "North Star",
@@ -44,5 +45,52 @@
     "The primary value proposition is: Monitor revenue, conversion, and gross margin anomalies and surface likely contributing factors for operators.",
     "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
     "Typical stakeholders include analytics, operations, product, and leadership teams working on finance, monitoring, anomaly."
+  ],
+  "app_archetype": "watchtower",
+  "ui_profile": {
+    "layout": "console",
+    "surface": "ink",
+    "font_stack": "\"Space Grotesk\", \"Segoe UI\", sans-serif",
+    "radius": 29,
+    "shadow": 57,
+    "eyebrow_style": "solid",
+    "module_columns": 2,
+    "hero_align": "split",
+    "headline_mode": "compact"
+  },
+  "app_modules": [
+    {
+      "label": "Signal 01",
+      "title": "Incident Prioritizer",
+      "description": "Simulate how incoming events are scored before they hit an operator queue.",
+      "endpoint": "/score",
+      "input_mode": "json",
+      "cta": "Prioritize",
+      "prefill": "{\n  \"features\": {\n    \"current_conversion\": 0.16,\n    \"baseline_conversion\": 0.12,\n    \"volume\": 1175,\n    \"segment\": \"paid_users\"\n  }\n}",
+      "hint": "Risk band and top signals will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Signal 02",
+      "title": "Alert Delta Review",
+      "description": "Compare current operating metrics with a baseline to explain what changed.",
+      "endpoint": "/analyze",
+      "input_mode": "json",
+      "cta": "Compare Signals",
+      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 19.9,\n    \"activation\": 25.5,\n    \"retention\": 40.8,\n    \"revenue\": 58.3\n  },\n  \"baseline\": {\n    \"acquisition\": 18.31,\n    \"activation\": 23.46,\n    \"retention\": 37.54,\n    \"revenue\": 53.64\n  }\n}",
+      "hint": "Operational movement summary will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Signal 03",
+      "title": "Triage Playbook",
+      "description": "Generate an action-oriented response plan for the next incident handling step.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Build Playbook",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for Revenue Anomaly Watch.\",\n  \"features\": {\n    \"current_conversion\": 0.16,\n    \"baseline_conversion\": 0.12,\n    \"volume\": 1175,\n    \"segment\": \"paid_users\"\n  },\n  \"metrics\": {\n    \"acquisition\": 19.9,\n    \"activation\": 25.5,\n    \"retention\": 40.8,\n    \"revenue\": 58.3\n  }\n}",
+      "hint": "Suggested next actions and rationale will appear here.",
+      "span": "wide"
+    }
   ]
 }
