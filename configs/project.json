@@ -1,0 +1,48 @@
+{
+  "slug": "revenue-anomaly-watch",
+  "title": "Revenue Anomaly Watch",
+  "project_type": "analytics",
+  "domain": "Finance Analytics",
+  "summary": "Monitor revenue, conversion, and gross margin anomalies and surface likely contributing factors for operators.",
+  "tags": [
+    "finance",
+    "monitoring",
+    "anomaly"
+  ],
+  "accent": "#588157",
+  "dashboard_metrics": [
+    {
+      "label": "North Star",
+      "value": "79",
+      "delta": "+7.1%"
+    },
+    {
+      "label": "Variance",
+      "value": "15%",
+      "delta": "-1.8%"
+    },
+    {
+      "label": "Decision Cycle",
+      "value": "5d",
+      "delta": "-0.5d"
+    }
+  ],
+  "sample_features": {
+    "current_conversion": 0.16,
+    "baseline_conversion": 0.12,
+    "volume": 1175,
+    "segment": "paid_users"
+  },
+  "sample_metrics": {
+    "acquisition": 19.9,
+    "activation": 25.5,
+    "retention": 40.8,
+    "revenue": 58.3
+  },
+  "knowledge_base": [
+    "Revenue Anomaly Watch is positioned as a Finance Analytics starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Monitor revenue, conversion, and gross margin anomalies and surface likely contributing factors for operators.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on finance, monitoring, anomaly."
+  ]
+}
