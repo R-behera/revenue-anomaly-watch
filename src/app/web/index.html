@@ -1,112 +1,29 @@
-
-        <!doctype html>
-        <html lang="en">
-        <head>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>Revenue Anomaly Watch</title>
-          <link rel="stylesheet" href="./styles.css">
-        </head>
-        <body class="surface-ink">
-          <div class="page layout-console eyebrow-solid headline-compact modules-2 hero-align-split">
-            <section class="hero">
-              <div class="panel hero-copy">
-                <span class="eyebrow" data-health>Signal Watchtower</span>
-                <h1 id="project-title">Revenue Anomaly Watch</h1>
-                <p id="project-summary" class="lead">Monitor revenue, conversion, and gross margin anomalies and surface likely contributing factors for operators.</p>
-                <ul id="project-tags" class="tag-list">
-                  <li>finance</li><li>monitoring</li><li>anomaly</li>
-                </ul>
-              </div>
-              <div class="panel hero-side">
-                <div class="metric-grid">
-                  <article class='card'><span>North Star</span><strong>79</strong><em>+7.1%</em></article>
-<article class='card'><span>Variance</span><strong>15%</strong><em>-1.8%</em></article>
-<article class='card'><span>Decision Cycle</span><strong>5d</strong><em>-0.5d</em></article>
-                </div>
-                <div class="mini-grid">
-                  <article class='mini-card'><span>Project Type</span><strong>ANALYTICS</strong></article><article class='mini-card'><span>Domain</span><strong>Finance Analytics</strong></article><article class='mini-card'><span>Application</span><strong>Signal Watchtower</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
-                </div>
-              </div>
-            </section>
-            <section class="app-grid">
-              <article class="panel module js-module span-normal">
-          <div class="module-header">
-            <span>Signal 01</span>
-            <h2>Incident Prioritizer</h2>
-            <p>Simulate how incoming events are scored before they hit an operator queue.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;features&quot;: {
-    &quot;current_conversion&quot;: 0.16,
-    &quot;baseline_conversion&quot;: 0.12,
-    &quot;volume&quot;: 1175,
-    &quot;segment&quot;: &quot;paid_users&quot;
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/score" data-input-mode="json">Prioritize</button>
-          </div>
-          <pre class="js-output">Risk band and top signals will appear here.</pre>
-        </article>
-<article class="panel module js-module span-normal">
-          <div class="module-header">
-            <span>Signal 02</span>
-            <h2>Alert Delta Review</h2>
-            <p>Compare current operating metrics with a baseline to explain what changed.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 19.9,
-    &quot;activation&quot;: 25.5,
-    &quot;retention&quot;: 40.8,
-    &quot;revenue&quot;: 58.3
-  },
-  &quot;baseline&quot;: {
-    &quot;acquisition&quot;: 18.31,
-    &quot;activation&quot;: 23.46,
-    &quot;retention&quot;: 37.54,
-    &quot;revenue&quot;: 53.64
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/analyze" data-input-mode="json">Compare Signals</button>
-          </div>
-          <pre class="js-output">Operational movement summary will appear here.</pre>
-        </article>
-<article class="panel module js-module span-wide">
-          <div class="module-header">
-            <span>Signal 03</span>
-            <h2>Triage Playbook</h2>
-            <p>Generate an action-oriented response plan for the next incident handling step.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;prompt&quot;: &quot;Recommend the next best action for Revenue Anomaly Watch.&quot;,
-  &quot;features&quot;: {
-    &quot;current_conversion&quot;: 0.16,
-    &quot;baseline_conversion&quot;: 0.12,
-    &quot;volume&quot;: 1175,
-    &quot;segment&quot;: &quot;paid_users&quot;
-  },
-  &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 19.9,
-    &quot;activation&quot;: 25.5,
-    &quot;retention&quot;: 40.8,
-    &quot;revenue&quot;: 58.3
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/recommend" data-input-mode="json">Build Playbook</button>
-          </div>
-          <pre class="js-output">Suggested next actions and rationale will appear here.</pre>
-        </article>
-            </section>
-            <footer class="footer">
-              <span>Finance Analytics • ANALYTICS • Signal Watchtower</span>
-              <span>revenue-anomaly-watch</span>
-            </footer>
-          </div>
-          <script id="bootstrap-data" type="application/json">{"project": {"slug": "revenue-anomaly-watch", "title": "Revenue Anomaly Watch", "project_type": "analytics", "domain": "Finance Analytics", "summary": "Monitor revenue, conversion, and gross margin anomalies and surface likely contributing factors for operators.", "tags": ["finance", "monitoring", "anomaly"]}, "app_archetype": "watchtower", "ui_profile": {"layout": "console", "surface": "ink", "font_stack": "\"Space Grotesk\", \"Segoe UI\", sans-serif", "radius": 29, "shadow": 57, "eyebrow_style": "solid", "module_columns": 2, "hero_align": "split", "headline_mode": "compact"}, "app_modules": [{"label": "Signal 01", "title": "Incident Prioritizer", "description": "Simulate how incoming events are scored before they hit an operator queue.", "endpoint": "/score", "input_mode": "json", "cta": "Prioritize", "prefill": "{\n  \"features\": {\n    \"current_conversion\": 0.16,\n    \"baseline_conversion\": 0.12,\n    \"volume\": 1175,\n    \"segment\": \"paid_users\"\n  }\n}", "hint": "Risk band and top signals will appear here.", "span": "normal"}, {"label": "Signal 02", "title": "Alert Delta Review", "description": "Compare current operating metrics with a baseline to explain what changed.", "endpoint": "/analyze", "input_mode": "json", "cta": "Compare Signals", "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 19.9,\n    \"activation\": 25.5,\n    \"retention\": 40.8,\n    \"revenue\": 58.3\n  },\n  \"baseline\": {\n    \"acquisition\": 18.31,\n    \"activation\": 23.46,\n    \"retention\": 37.54,\n    \"revenue\": 53.64\n  }\n}", "hint": "Operational movement summary will appear here.", "span": "normal"}, {"label": "Signal 03", "title": "Triage Playbook", "description": "Generate an action-oriented response plan for the next incident handling step.", "endpoint": "/recommend", "input_mode": "json", "cta": "Build Playbook", "prefill": "{\n  \"prompt\": \"Recommend the next best action for Revenue Anomaly Watch.\",\n  \"features\": {\n    \"current_conversion\": 0.16,\n    \"baseline_conversion\": 0.12,\n    \"volume\": 1175,\n    \"segment\": \"paid_users\"\n  },\n  \"metrics\": {\n    \"acquisition\": 19.9,\n    \"activation\": 25.5,\n    \"retention\": 40.8,\n    \"revenue\": 58.3\n  }\n}", "hint": "Suggested next actions and rationale will appear here.", "span": "wide"}], "sample_features": {"current_conversion": 0.16, "baseline_conversion": 0.12, "volume": 1175, "segment": "paid_users"}, "sample_metrics": {"acquisition": 19.9, "activation": 25.5, "retention": 40.8, "revenue": 58.3}, "knowledge_base": ["Revenue Anomaly Watch is positioned as a Finance Analytics starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.", "The primary value proposition is: Monitor revenue, conversion, and gross margin anomalies and surface likely contributing factors for operators.", "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.", "Typical stakeholders include analytics, operations, product, and leadership teams working on finance, monitoring, anomaly."], "dashboard_metrics": [{"label": "North Star", "value": "79", "delta": "+7.1%"}, {"label": "Variance", "value": "15%", "delta": "-1.8%"}, {"label": "Decision Cycle", "value": "5d", "delta": "-0.5d"}]}</script>
-          <script src="./app.js"></script>
-        </body>
-        </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revenue Anomaly Watch App</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div id="scene" class="app-scene">
+    <header class="shell hero">
+      <div>
+        <span class="eyebrow">Applied AI product systems</span>
+        <h1>Revenue Anomaly Watch</h1>
+        <p>![Demo Screenshot](demo/screenshot.png)</p>
+      </div>
+      <aside class="status-card">
+        <div class="pill">API connected</div>
+        <div class="pill">operations lead</div>
+        <div class="pill">depth-columns</div>
+      </aside>
+    </header>
+    <section id="metrics" class="grid metrics"></section>
+    <section id="signals" class="grid signals"></section>
+  </div>
+  <script>window.PROJECT_MANIFEST = {"slug": "revenue-anomaly-watch", "title": "Revenue Anomaly Watch", "summary": "![Demo Screenshot](demo/screenshot.png)", "domain": "Applied AI product systems", "audience": "operations lead", "promise": "Turn promising technical capability into a production-shaped workflow for real teams.", "hero": ["Production-grade app scaffold with API, CI, tests, Docker, and GitHub Pages landing.", "3D landing surface designed for GitHub Pages and recruiter-friendly storytelling.", "App backend structured for local or container deployment without changing the product narrative."], "kpis": [{"label": "Workflow clarity", "value": "90%", "note": "Operator actions mapped to product stages"}, {"label": "Deployment posture", "value": "API + Docker", "note": "Local and containerized startup paths"}, {"label": "Presentation layer", "value": "3D Pages ready", "note": "Static GitHub landing page included"}], "stages": ["ingest", "validate", "analyze", "decide", "monitor"], "cards": [{"title": "Operator cockpit", "body": "One-screen surface for the operations lead to understand what matters first."}, {"title": "API contract", "body": "Structured endpoints for health, manifest, readiness, and showcase data."}, {"title": "Deployment path", "body": "Repository includes Docker, Compose, CI workflow, and a Pages-ready landing surface."}], "scene": "depth-columns", "theme": {"bg": "#0c0812", "surface": "#171022", "ink": "#f5f0ff", "muted": "#a99bc2", "accent": "#c38fff", "accent2": "#6cf0ff"}, "pages_url": "https://r-behera.github.io/revenue-anomaly-watch/", "api_examples": {"health": {"status": "ok", "project": "revenue-anomaly-watch"}, "readiness": {"api": "ready", "landing_page": "docs/index.html", "container": "Dockerfile present"}, "signals": [{"name": "Decision coverage", "status": "strong", "detail": "App and landing narrative aligned"}, {"name": "Operator context", "status": "strong", "detail": "Primary user anchored as operations lead"}, {"name": "Delivery path", "status": "ready", "detail": "Pages + containerized app scaffold generated"}]}};</script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+{
+  "slug": "revenue-anomaly-watch",
+  "title": "Revenue Anomaly Watch",
+  "summary": "![Demo Screenshot](demo/screenshot.png)",
+  "domain": "Applied AI product systems",
+  "audience": "operations lead",
+  "promise": "Turn promising technical capability into a production-shaped workflow for real teams.",
+  "hero": [
+    "Production-grade app scaffold with API, CI, tests, Docker, and GitHub Pages landing.",
+    "3D landing surface designed for GitHub Pages and recruiter-friendly storytelling.",
+    "App backend structured for local or container deployment without changing the product narrative."
+  ],
+  "kpis": [
+    {
+      "label": "Workflow clarity",
+      "value": "90%",
+      "note": "Operator actions mapped to product stages"
+    },
+    {
+      "label": "Deployment posture",
+      "value": "API + Docker",
+      "note": "Local and containerized startup paths"
+    },
+    {
+      "label": "Presentation layer",
+      "value": "3D Pages ready",
+      "note": "Static GitHub landing page included"
+    }
+  ],
+  "stages": [
+    "ingest",
+    "validate",
+    "analyze",
+    "decide",
+    "monitor"
+  ],
+  "cards": [
+    {
+      "title": "Operator cockpit",
+      "body": "One-screen surface for the operations lead to understand what matters first."
+    },
+    {
+      "title": "API contract",
+      "body": "Structured endpoints for health, manifest, readiness, and showcase data."
+    },
+    {
+      "title": "Deployment path",
+      "body": "Repository includes Docker, Compose, CI workflow, and a Pages-ready landing surface."
+    }
+  ],
+  "scene": "depth-columns",
+  "theme": {
+    "bg": "#0c0812",
+    "surface": "#171022",
+    "ink": "#f5f0ff",
+    "muted": "#a99bc2",
+    "accent": "#c38fff",
+    "accent2": "#6cf0ff"
+  },
+  "pages_url": "https://r-behera.github.io/revenue-anomaly-watch/",
+  "api_examples": {
+    "health": {
+      "status": "ok",
+      "project": "revenue-anomaly-watch"
+    },
+    "readiness": {
+      "api": "ready",
+      "landing_page": "docs/index.html",
+      "container": "Dockerfile present"
+    },
+    "signals": [
+      {
+        "name": "Decision coverage",
+        "status": "strong",
+        "detail": "App and landing narrative aligned"
+      },
+      {
+        "name": "Operator context",
+        "status": "strong",
+        "detail": "Primary user anchored as operations lead"
+      },
+      {
+        "name": "Delivery path",
+        "status": "ready",
+        "detail": "Pages + containerized app scaffold generated"
+      }
+    ]
+  }
+}
